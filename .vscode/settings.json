@@ -1,0 +1,6 @@
+{
+  // Settings for Prettier
+  "editor.formatOnSave": true,
+  "editor.wordWrapColumn": 120,
+  "editor.wordWrap": "wordWrapColumn"
+}

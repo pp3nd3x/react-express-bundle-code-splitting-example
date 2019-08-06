@@ -1,0 +1,33 @@
+{
+  "name": "react-express-bundle-code-splitting-example",
+  "version": "1.0.0",
+  "description": "Example of code splitting using ExpressJS, ReactJS and Webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf ./dist && npm run build:client && npm run build:server",
+    "build:client": "webpack --config ./webpack/client.config.js",
+    "build:server": "webpack --config ./webpack/server.config.js",
+    "serve": "node ./dist/server/index.bundle.js"
+  },
+  "keywords": [],
+  "author": "josecc",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "dependencies": {
+    "@babel/core": "^7.5.5",
+    "express": "^4.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-loadable": "^5.5.0",
+    "react-router-dom": "^5.0.1"
+  }
+}
