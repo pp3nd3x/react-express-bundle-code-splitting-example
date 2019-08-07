@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const ReactLoadablePlugin = require('react-loadable/webpack')
   .ReactLoadablePlugin;
 const path = require('path');
@@ -34,6 +35,11 @@ module.exports = {
   plugins: [
     new ReactLoadablePlugin({
       filename: './dist/react-loadable.json'
-    })
+    }),
+    new webpack.NamedChunksPlugin(
+      chunk =>
+        chunk.name ||
+        chunk.mapModules(m => path.basename(m.request, '.js')).join('.')
+    )
   ]
 };
